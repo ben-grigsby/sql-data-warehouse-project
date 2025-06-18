@@ -16,11 +16,11 @@ and __fact tables__ for specific business metrics.
 | customer_number | INTVARCHAR | Alphanumeric identifier representing the customer, used for tracking and referencing. |
 | first_name | VARCHAR | Customer's first name. |
 | last_name | VARCHAR | Customer's last name. |
-| country | VARCHAR | Customer's country of residence. |
-| marital_status | VARCHAR | Customer's marital status. |
-| gender | VARCHAR | Customer's gender. |
-| birth_date | DATE | Customer's birthday name. |
-| create_date | DATE | Creation date of customer's account. |
+| country | VARCHAR | Customer's country of residence (e.g. 'Australia'). |
+| marital_status | VARCHAR | Customer's marital status (e.g. 'Married', 'Single').|
+| gender | VARCHAR | Customer's gender (e.g. 'Male', 'Female', 'n/a'). |
+| birth_date | DATE | Customer's birthday name, formatted as YYYY-MM-DD (e.g. 1971-10-06). |
+| create_date | DATE | Creation date of customer's account, formatted as YYYY-MM-DD (e.g. 1971-10-06). |
 
 ---
 
@@ -34,12 +34,12 @@ and __fact tables__ for specific business metrics.
 | product_id | INT | Unique numerical identifier assigned to each product. |
 | product_number | INTVARCHAR | Alphanumeric identifier representing the product, used for tracking and referencing. |
 | category_id | VARCHAR | Identifier corresponding to the category of the product. |
-| category | VARCHAR | Category that the product belongs to. |
+| category | VARCHAR | Category that the product belongs to (e.g. 'Accessories', 'Bikes', 'Clothing', 'Components). |
 | subcategory | VARCHAR | Subcategory that the product belongs to. |
-| maintenance | VARCHAR | Status of whether the product has been maintained. |
+| maintenance | VARCHAR | Status of whether the product has been maintained (e.g. 'Yes', 'No'). |
 | cost | INT | Cost of the product. |
 | product_line | VARCHAR | Specific line the product is sold to. |
-| start_date | DATE | Date of first selling the product. |
+| start_date | DATE | Date of first selling the product, formatted as YYYY-MM-DD (e.g. 1971-10-06). |
 
 ---
 
@@ -52,9 +52,9 @@ and __fact tables__ for specific business metrics.
 | order_number | INTVARCHAR | Surrogate key uniquely identifying each sale. |
 | product_key | INT | Unique numerical identifier referencing each product. |
 | customer_key | INTVARCHAR | Alphanumeric identifier referencing the customer. |
-| order_date | DATE | Date of sales order. |
-| shipping_date | DATE | Date of product sent out for shipping. |
-| due_date | VARCHAR | Date of expected product arrival. |
+| order_date | DATE | Date of sales order, formatted as YYYY-MM-DD (e.g. 1971-10-06). |
+| shipping_date | DATE | Date of product sent out for shipping, formatted as YYYY-MM-DD (e.g. 1971-10-06). |
+| due_date | VARCHAR | Date of expected product arrival, formatted as YYYY-MM-DD (e.g. 1971-10-06). |
 | sales_amount | INT | Total sales of product. |
 | quantity | INT | Number of products sold. |
 | price | INT | Price of each individual product sold. |
